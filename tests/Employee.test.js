@@ -6,12 +6,12 @@ describe("Employee class",()=>{
             //Arrange
 
             //Act 
-            const employee = new Employee("Jared", 1, "Jared@fakeamil.com");
+            const employee = new Employee("Jared", 1, "Jared@fakemail.com");
 
             //Assert 
             expect(employee.name).toEqual("Jared");
             expect(employee.id).toEqual(1);
-            expect(employee.email).toEqual("Jared@fakeamil.com");
+            expect(employee.email).toEqual("Jared@fakemail.com");
         });
 
         it("should throw an error if provided no arguments",()=>{
@@ -39,12 +39,15 @@ describe("Employee class",()=>{
 
         it("should throw an error if 'id' is not a number",()=>{
             //Arrange
-            const cb = () => {return new Employee("Jared",'hello',"Jared@fakemail.com")};
+            //const cb = () => {return new Employee("Jared",'hello',"Jared@fakemail.com")};
+            const cb = () => new Employee("Jared",'hello',"Jared@fakemail.com");
 
             //Act
 
             //Assert
-            expect(cb).toThrow("Expected parameter 'id' to be a non-negative number");
+            //expect(cb).toThrow("Expected parameter 'id' to be a non-negative number");
+            //expect(cb.toBe("Expected parameter 'id' to be a non-negative number"))
+            expect(cb).toContain(NaN)
         });
 
         it("should throw an error if 'email' is not valid",()=>{
