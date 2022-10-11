@@ -26,18 +26,6 @@ describe("Employee class",()=>{
             // expect(employee.name).toThrow()
         });
 
-        // it("should throw an error if not provided an id", ()=>{
-        //     //Arrange
-        //     const cb =() => new Employee("Jared","Jared@fakemail.com");
-        //     // const employee = new Employee("Jared","Jared@fakemail.com")
-            
-        //     //Act
-
-        //     //Assert 
-        //     expect(cb).toThrow("Expected parameter 'id' to be a non-negative number");
-        //     // expect(employee.id).toThrowError(err);
-        // });
-
         it("should throw an error if 'name' is not a string",()=>{
             //Arrange
             const cb = () => new Employee(100, "Jared@fakemail.com");
