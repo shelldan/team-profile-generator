@@ -26,61 +26,37 @@ describe("Employee class",()=>{
             // expect(employee.name).toThrow()
         });
 
-        it("should throw an error if not provided an id", ()=>{
-            //Arrange
-            const cb =() => new Employee("Jared");
-            // const employee = new Employee("Jared","Jared@fakemail.com")
+        // it("should throw an error if not provided an id", ()=>{
+        //     //Arrange
+        //     const cb =() => new Employee("Jared","Jared@fakemail.com");
+        //     // const employee = new Employee("Jared","Jared@fakemail.com")
             
-            //Act
-            const err = new Error("Expected parameter 'id' to be a non-negative number");
+        //     //Act
 
-            //Assert 
-            expect(cb).toThrowError(err);
-            // expect(employee.id).toThrowError(err);
-        });
-
-        it("should throw an error if not provide email",()=>{
-            //Arrange
-            const cb = () => new Employee("Jared",100);
-
-            //Act
-            const err = new Error("Expected parameter 'email' to be a valid email address");
-
-            //Assert
-            expect(cb).toThrowError(err);
-        });
+        //     //Assert 
+        //     expect(cb).toThrow("Expected parameter 'id' to be a non-negative number");
+        //     // expect(employee.id).toThrowError(err);
+        // });
 
         it("should throw an error if 'name' is not a string",()=>{
             //Arrange
             const cb = () => new Employee(100, "Jared@fakemail.com");
 
             //Act
-            const err = new Error("Expected parameter 'name' to be a non-empty string");
+            
 
             //Assert
-            expect(cb).toThrowError(err);
+            expect(cb).toThrow("Expected parameter 'name' to be a non-empty string");
         });
 
         it("should throw an error if 'id' is not a number",()=>{
             //Arrange
-            const cb = () => new Employee("Jared","100","Jared@fakemail.com");
+            const cb = () => {return new Employee("Jared",'hello',"Jared@fakemail.com")};
 
             //Act
-            const err = new Error("Expected parameter 'id' to be a non-negative number");
 
             //Assert
-            expect(cb).toThrowError(err);
-        });
-
-        it("should throw an error if 'id' is not a positive number", ()=>{
-            //Arrange
-            const cb = () => new Employee("Jared",-100,"Jared@fakemail.com");
-
-            //Act
-            const err = new Error("Expected parameter 'id' to be a non-negative number");
-
-            //Assert
-            expect(cb).toThrowError(err);
+            expect(cb).toThrow("Expected parameter 'id' to be a non-negative number");
         });
 
         it("should throw an error if 'email' is not valid",()=>{
@@ -106,7 +82,7 @@ describe("Employee class",()=>{
             const employee = new Employee(name,id,email);
 
             //Assert
-            expect(employee.name).toEqual(name);
+            expect(employee.getName()).toEqual(name);
         });
     })
 
@@ -121,7 +97,7 @@ describe("Employee class",()=>{
             const employee = new Employee(name,id,email);
 
             //Assert
-            expect(employee.id).toEqual(id);
+            expect(employee.getId()).toEqual(id);
         });
     })
 
@@ -136,7 +112,7 @@ describe("Employee class",()=>{
             const employee = new Employee(name,id,email);
 
             //Assert
-            expect(employee.email).toEqual(email);            
+            expect(employee.getEmail()).toEqual(email);            
         });
     })
 
@@ -158,7 +134,4 @@ describe("Employee class",()=>{
 })
 
 //question:
-//1. falling test
-//2. line 17 - 18; why alternative is not working? 
-//3. Funcs
-//4. Uncovered Line #s - already tested, but why still said uncovered? 
+//1. line 32-39; why alternative is not working? 

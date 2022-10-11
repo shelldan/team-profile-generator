@@ -49,17 +49,16 @@ i{
     background-color: #F8F8F8;
 }
 
-.form{
+.unorder-list{
     display:flex;
     flex-direction: column;
     width:300px; 
     padding:5px;
 }
 
-label{
+li{
     margin-top:1rem;
+    height:2rem;
+    list-style-type: none;
 }
 
-input{
-    height:2rem;
-}
