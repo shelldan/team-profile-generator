@@ -33,7 +33,7 @@ SO THAT I have quick access to their emails and GitHub profiles
 ```
 
 ## Screenshot
-![](assets/images/screenshot.png)
+![](assets/images/team.png)
 
 ## Installation
 To clone the repo:
