@@ -15,11 +15,12 @@
 1. [Description](#description)
 2. [User Story](#user-story)
 3. [Screenshot](#screenshot)
-4. [Installation](#installation)
-5. [License](#license)
-6. [Contributing](#contributing)
-7. [Test](#test)
-8. [Questions](#contact-information)
+4. [Demo](#demo)
+5. [Installation](#installation)
+6. [License](#license)
+7. [Contributing](#contributing)
+8. [Test](#test)
+9. [Questions](#contact-information)
 
 ## Description
 This is a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
@@ -34,6 +35,9 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## Screenshot
 ![](assets/images/team.png)
+
+## Demo
+https://drive.google.com/file/d/1n8eXFUSPgwkdQI8qcQO9D8GjD_7hvXzZ/view?usp=sharing
 
 ## Installation
 To clone the repo:
